@@ -40,7 +40,7 @@ A motion-activated light controller for school corridors in mainland China. A ba
 
 | Item | Decision |
 | --- | --- |
-| Hardware | ESP32-C3 SuperMini board hand-wired on perfboard to a 433 MHz SX1268 module that has 2.54 mm pin headers or a breakout board |
+| Hardware | ESP32-C3 SuperMini board hand-wired on perfboard to an Ebyte E22-400M22S (same module as the slave) on an adapter board with 2.54 mm pin headers |
 | Power | USB, always on, placed near a power outlet |
 | Network | Existing password-protected WiFi |
 | Functions | Shows slave status and accepts commands from a phone; decides when lights turn off; applies time-of-day rules |
@@ -51,7 +51,8 @@ A motion-activated light controller for school corridors in mainland China. A ba
 | Item | Decision |
 | --- | --- |
 | MCU | STM32L051K8T6 (Cortex-M0+, 64 KB flash, LQFP32). Chosen over the 32 KB STM32L031 for firmware headroom. |
-| Radio | 433 MHz SX1268 stamp-hole module on SPI |
+| Radio | Ebyte E22-400M22S (SX1268, 14×20 mm, stamp holes, TCXO) on SPI |
+| Antenna | 433 MHz FPC antenna (e.g. TX433-FPC-3208) plugged into the module's own IPEX socket; the module's ANT pad is left unconnected and the slave PCB has no antenna connector |
 | Battery | One 18650 cell, removed and charged in an external charger |
 | Reverse-polarity protection | AO3401 P-MOSFET: drain to battery +, source to the circuit, gate to ground through a resistor. Chosen over a diode to avoid a ~0.3 V drop. |
 | 3.3 V regulator | TPS7A0233 (fixed 3.3 V, ~25 nA quiescent current, SOT-23-5). Powers the MCU, radio and sensors only (~30 mA peak). |
@@ -114,7 +115,7 @@ Firmware must configure PB9, PB12–PB15, PH0, PH1 and PC13 as outputs driven lo
 - [ ] Force needed to flip the switch, and servo torque (bench test with a real switch and servo)
 - [ ] Mechanism that presses the rocker (after the bench tests)
 - [ ] Boost converter IC, if the bench test shows 5 V is needed
-- [ ] SX1268 module part numbers: stamp-hole for the slave; pin headers or breakout for the master
+- [ ] Adapter board with pin headers for the master's E22-400M22S
 - [ ] Phototransistor part number
 - [ ] Motion-to-light-on latency target
 - [ ] Light-off delay and report interval
