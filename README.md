@@ -57,12 +57,15 @@ A motion-activated light controller for school corridors in mainland China. A ba
 | 3.3 V regulator | TPS7A0233 (fixed 3.3 V, ~25 nA quiescent current, SOT-23-5). Powers the MCU, radio and sensors only (~30 mA peak). |
 | Servo power switch | High-side P-MOSFET from the battery, off whenever the servo is idle. A ~100 kΩ resistor pulls its gate up to the battery; a 2N7002 driven by the MCU pulls it low. |
 | Servo supply voltage | PCB has a footprint for a boost converter plus a 0 Ω bypass resistor, so a bench test can choose direct battery or 5 V |
-| Motion sensor | Bare AM312 PIR soldered on the PCB (~15 µA), behind a separate Fresnel lens in the enclosure. mmWave rejected for its current draw. |
+| Motion sensor | Bare AM312 PIR soldered on the PCB, behind a separate Fresnel lens in the enclosure. mmWave rejected for its current draw. Current: ~13–15 µA measured by others at 3.3 V; datasheet maximum 0.1 mA. |
+| PIR power switching | PIR powered from PA8 through a 100 Ω / 1 µF filter, so firmware can switch it off when lights are not needed (daytime, weekends, holidays). Firmware ignores PIR_OUT for ~30 s after power-up and keeps PA0's pull-up off while the PIR is off. |
 | Ambient light | Phototransistor read by the ADC, powered from a GPIO only while measuring |
 | Battery monitoring | No extra parts. Firmware measures VDD with the internal voltage reference; VDD follows the battery once it falls below ~3.3 V. This gives a low-battery warning only, not a full-range gauge. |
 | Status LED | Shows pairing, low battery and motion trigger |
 | External button | User function, e.g. pause this slave for 2 hours |
 | Internal button | Pairing and debug; not reachable from outside |
+| Clock | 32.768 kHz crystal on the LSE pins for accurate timers (under 1 µA). The internal LSI RC oscillator (26–56 kHz) was rejected as too inaccurate. |
+| Crystal | HCI FC31M2-32.768-N07LLDTL (LCSC C5120558): 3215 package, 7 pF load, ±20 ppm, ESR < 70 kΩ, with two 10 pF capacitors. Its ESR needs the STM32's medium-high LSE drive (LSEDRV = 10); firmware must set this before enabling the LSE. Chosen because the lower-ESR Epson FC-135R was out of stock. Drop-in alternative: ECS-.327-7-34R-TR (LCSC C6547871, ESR 50 kΩ, medium-low drive), only 5 in stock on 2026-11-11. |
 | Firmware updates | SWD programming pads; no OTA |
 
 ### 1.6 Slave Pin Assignment (STM32L051K8T6)
@@ -88,8 +91,8 @@ Checked against ST datasheet DS10184 Rev 10. PA0–PA3 each use their own EXTI l
 | PB4 | Status LED | |
 | PA9 / PA10 | Debug UART TX / RX | USART1 (AF4) |
 | PA13 / PA14 | SWDIO / SWCLK | Programming pads |
-| PC14 / PC15 | 32.768 kHz crystal | Optional; may be left unpopulated |
-| PA8 | Unused | |
+| PC14 / PC15 | 32.768 kHz crystal (LSE) | HCI FC31M2, 7 pF load, with 10 pF caps |
+| PA8 | PIR power (PIR_PWR) | Through a 100 Ω / 1 µF filter |
 | BOOT0 (pin 31) | Boot mode | 10 kΩ pull-down to ground, so the chip always runs user firmware |
 | NRST (pin 4) | Reset | To the reset button and the SWD pads |
 
@@ -147,7 +150,7 @@ One 3000 mAh 18650 (~2400 mAh usable) at ~4.5 mAh/day lasts about 500 days in th
 
 | Item | Estimate |
 | --- | --- |
-| Sleep current (PIR ~15 µA, radio duty-cycled receive ~10–20 µA, MCU and regulator ~1 µA) | ~25–40 µA (~0.6–1.0 mAh/day) |
+| Sleep current (PIR ~15 µA, radio duty-cycled receive ~10–20 µA, MCU, regulator and crystal ~2 µA) | ~25–40 µA (~0.6–1.0 mAh/day) |
 | One on + off cycle (two servo presses) | ~0.13 mAh |
 | One report to the master | ~0.01 mAh |
 | School day (~25 on/off cycles, at most one report per minute while a light is on) | ~6 mAh/day |
