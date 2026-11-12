@@ -54,13 +54,14 @@ A motion-activated light controller for school corridors in mainland China. A ba
 | Radio | Ebyte E22-400M22S (SX1268, 14×20 mm, stamp holes, TCXO) on SPI |
 | Antenna | 433 MHz FPC antenna (e.g. TX433-FPC-3208) plugged into the module's own IPEX socket; the module's ANT pad is left unconnected and the slave PCB has no antenna connector |
 | Battery | One 18650 cell, removed and charged in an external charger |
+| Battery holder | Generic 1-cell through-hole 18650 holder from Taobao, a clone of the MPD BH-18650-PC (77.7 mm long; solder pins 72.90 mm apart; two Ø3.2 mm mounting holes 55.61 mm apart). Soldered onto the slave PCB with KiCad footprint `Battery:BatteryHolder_MPD_BH-18650-PC`, whose pad 1 is +. The genuine MPD part (LCSC C5339083) was out of stock. |
 | Reverse-polarity protection | AO3401 P-MOSFET: drain to battery +, source to the circuit, gate to ground through a resistor. Chosen over a diode to avoid a ~0.3 V drop. |
 | 3.3 V regulator | TPS7A0233 (fixed 3.3 V, ~25 nA quiescent current, SOT-23-5). Powers the MCU, radio and sensors only (~30 mA peak). |
 | Servo power switch | High-side P-MOSFET from the battery, off whenever the servo is idle. A ~100 kΩ resistor pulls its gate up to the battery; a 2N7002 driven by the MCU pulls it low. |
 | Servo supply voltage | PCB has a footprint for a boost converter plus a 0 Ω bypass resistor, so a bench test can choose direct battery or 5 V |
-| Motion sensor | Bare AM312 PIR soldered on the PCB, behind a separate Fresnel lens in the enclosure. mmWave rejected for its current draw. Current: ~13–15 µA measured by others at 3.3 V; datasheet maximum 0.1 mA. |
+| Motion sensor | Bare AM312 PIR (LCSC C114881, TO-5 can; pins 1 VDD, 2 OUT, 3 GND per LCSC) soldered on the PCB, behind a separate Fresnel lens in the enclosure. mmWave rejected for its current draw. Current: ~13–15 µA measured by others at 3.3 V; datasheet maximum 0.1 mA. |
 | PIR power switching | PIR powered from PA8 through a 100 Ω / 1 µF filter, so firmware can switch it off when lights are not needed (daytime, weekends, holidays). Firmware ignores PIR_OUT for ~30 s after power-up and keeps PA0's pull-up off while the PIR is off. |
-| Ambient light | Phototransistor read by the ADC, powered from a GPIO only while measuring |
+| Ambient light | Everlight ALS-PT19-315C/L177/TR8 visible-light phototransistor (LCSC C146233, 0603), read by the ADC with a 100 kΩ load and powered from a GPIO only while measuring. Chosen over the infrared PT15-21C, which barely sees LED lighting. |
 | Battery monitoring | No extra parts. Firmware measures VDD with the internal voltage reference; VDD follows the battery once it falls below ~3.3 V. This gives a low-battery warning only, not a full-range gauge. |
 | Status LED | Shows pairing, low battery and motion trigger |
 | External button | User function, e.g. pause this slave for 2 hours |
@@ -116,7 +117,6 @@ Firmware must configure PB9, PB12–PB15, PH0, PH1 and PC13 as outputs driven lo
 - [ ] Mechanism that presses the rocker (after the bench tests)
 - [ ] Boost converter IC, if the bench test shows 5 V is needed
 - [ ] Adapter board with pin headers for the master's E22-400M22S
-- [ ] Phototransistor part number
 - [ ] Motion-to-light-on latency target
 - [ ] Light-off delay and report interval
 - [ ] Phone side: master-hosted web page, Mi Home, or another platform
@@ -128,7 +128,6 @@ Firmware must configure PB9, PB12–PB15, PH0, PH1 and PC13 as outputs driven lo
 | Area | Suggestion | Reason |
 | --- | --- | --- |
 | Parts | MG90S servo | Metal gears, durable |
-| Parts | PT15-21C phototransistor | Cheap and common |
 | Parts | Boost IC with an enable pin | Can be shut off between servo actions |
 | Mechanical | Servo arm rests at the middle of the rocker, swings one way for on and the other for off, then returns to the middle | The switch still works by hand |
 | Mechanical | Short servo arm pressing near the outer edge of the rocker; add a cam or lever if more force is needed | Less servo torque needed |

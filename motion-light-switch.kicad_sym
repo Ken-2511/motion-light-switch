@@ -25,7 +25,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "motion-light-switch:E22-400M22S"
 			(at 0 0 0)
 			(hide yes)
 			(effects
@@ -497,7 +497,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "motion-light-switch:AM312_TO-5-3"
 			(at 0 0 0)
 			(hide yes)
 			(effects
@@ -506,7 +506,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://lcsc.com/product-detail/Infrared-Sensors_AM312_C114881.html"
 			(at 0 0 0)
 			(hide yes)
 			(effects
@@ -515,7 +515,7 @@
 				)
 			)
 		)
-		(property "Description" "Digital PIR motion sensor, 2.7-12 V. PIN NUMBERS NOT YET VERIFIED."
+		(property "Description" "Senba AM312 digital PIR motion sensor, 2.7-12 V, TO-5 can (LCSC C114881)"
 			(at 0 0 0)
 			(hide yes)
 			(effects
