@@ -1,4 +1,0 @@
-(fp_lib_table
-	(version 7)
-	(lib (name "motion-light-switch")(type "KiCad")(uri "${KIPRJMOD}/motion-light-switch.pretty")(options "")(descr "Project footprints"))
-)

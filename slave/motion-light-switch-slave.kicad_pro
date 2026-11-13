@@ -264,7 +264,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "motion-light-switch.kicad_pro",
+    "filename": "motion-light-switch-slave.kicad_pro",
     "version": 3
   },
   "net_settings": {

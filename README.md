@@ -4,6 +4,16 @@ A motion-activated light controller for school corridors in mainland China. A ba
 
 **How to read this file:** Section 1 holds only decisions the author has confirmed. Section 2 lists open questions. Section 3 lists suggestions that are **not** confirmed. Section 4 is an estimate, not a measurement.
 
+**Repository layout:**
+
+| Folder | Contents |
+| --- | --- |
+| `slave/` | KiCad project `motion-light-switch-slave` (schematic and 50×80 mm PCB) |
+| `master/` | KiCad project `motion-light-switch-master` (schematic and 46×34 mm PCB) |
+| `lib/` | Shared KiCad library `motion-light-switch`: custom symbols (`motion-light-switch.kicad_sym`) and footprints (`motion-light-switch.pretty/`), used by both projects |
+
+The two boards are ordered as separate designs (a combined panel would incur a different-design surcharge).
+
 ## 1. Confirmed Decisions
 
 ### 1.1 Site
@@ -24,7 +34,7 @@ A motion-activated light controller for school corridors in mainland China. A ba
 | Radio protocol | Plain LoRa between master and slaves (not LoRaWAN) |
 | Radio chip | Semtech SX1268 in both master and slave |
 | Band | 433 MHz (433.05–434.79 MHz), transmit power ≤ 10 mW per MIIT micro-power rules. 470–510 MHz rejected: MIIT designates it mainly for civil metering devices. |
-| Custom PCB | Slave only, as small as possible. The master uses off-the-shelf boards. |
+| Custom PCBs | Slave board, as small as possible; master carrier board for the ESP32-C3 SuperMini and the radio module |
 | EDA | KiCad |
 
 ### 1.3 Control Logic
@@ -40,11 +50,26 @@ A motion-activated light controller for school corridors in mainland China. A ba
 
 | Item | Decision |
 | --- | --- |
-| Hardware | ESP32-C3 SuperMini board hand-wired on perfboard to an Ebyte E22-400M22S (same module as the slave) on an adapter board with 2.54 mm pin headers |
+| Hardware | 46×34 mm carrier PCB: an ESP32-C3 SuperMini plugs into two 1×8 2.54 mm sockets (rows 15.24 mm apart, USB-C at the top edge), and an Ebyte E22-400M22S (same module as the slave) is soldered on. 10 µF + 100 nF at the module's VCC, a keep-out under the module, two M3 mounting holes. |
+| Radio supply | The SuperMini's 3V3 output |
 | Power | USB, always on, placed near a power outlet |
 | Network | Existing password-protected WiFi |
 | Functions | Shows slave status and accepts commands from a phone; decides when lights turn off; applies time-of-day rules |
 | Phone access | Same WiFi network only; no custom app |
+
+**Master pin assignment (ESP32-C3 SuperMini):** strapping pins GPIO2, GPIO8 (on-board LED) and GPIO9 (BOOT button) are unused; logs go over the SuperMini's USB-C.
+
+| GPIO | Use |
+| --- | --- |
+| GPIO6 / GPIO7 / GPIO5 | E22 SCK / MOSI / MISO |
+| GPIO10 | E22 NSS |
+| GPIO4 | E22 BUSY |
+| GPIO3 | E22 DIO1 |
+| GPIO20 | E22 NRST |
+| GPIO0 / GPIO1 | E22 TXEN / RXEN |
+| GPIO21 | Spare, on test pad TP1 |
+
+The SuperMini pin order and row spacing come from a published pinout image; check them against the real board before ordering.
 
 ### 1.5 Slave Electronics
 
@@ -116,7 +141,6 @@ Firmware must configure PB9, PB12–PB15, PH0, PH1 and PC13 as outputs driven lo
 - [ ] Force needed to flip the switch, and servo torque (bench test with a real switch and servo)
 - [ ] Mechanism that presses the rocker (after the bench tests)
 - [ ] Boost converter IC, if the bench test shows 5 V is needed
-- [ ] Adapter board with pin headers for the master's E22-400M22S
 - [ ] Motion-to-light-on latency target
 - [ ] Light-off delay and report interval
 - [ ] Phone side: master-hosted web page, Mi Home, or another platform

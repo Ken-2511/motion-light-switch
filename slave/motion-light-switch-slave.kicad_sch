@@ -4616,7 +4616,7 @@
 			(uuid "ac27a14a-5a17-44af-92bd-4775d6122a48")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "BT1")
 					(unit 1)
@@ -4681,7 +4681,7 @@
 			(uuid "b27a825b-51c5-4281-898b-6ae0ac305725")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR1")
 					(unit 1)
@@ -4746,7 +4746,7 @@
 			(uuid "aec3ef95-0cdd-4a0d-b6c1-cfb8b7c3be56")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#FLG1")
 					(unit 1)
@@ -4821,7 +4821,7 @@
 			(uuid "c86245ff-730e-4877-b452-6749093f210c")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "Q1")
 					(unit 1)
@@ -4890,7 +4890,7 @@
 			(uuid "7030d1a7-d882-439b-ba48-5df9d8c0e56a")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "R1")
 					(unit 1)
@@ -4955,7 +4955,7 @@
 			(uuid "8ea21c70-5090-4647-a0cb-8dc124ae91a9")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR2")
 					(unit 1)
@@ -5020,7 +5020,7 @@
 			(uuid "41417830-a073-4eef-b458-6d433a6eb69c")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#FLG2")
 					(unit 1)
@@ -5099,7 +5099,7 @@
 			(uuid "d5f23209-4f77-40d8-bc7f-d7fb800b276d")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "C1")
 					(unit 1)
@@ -5164,7 +5164,7 @@
 			(uuid "3e107586-e8d5-4938-bf2d-6836de557a81")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR3")
 					(unit 1)
@@ -5233,7 +5233,7 @@
 			(uuid "e689a9d0-38f9-421c-998b-5d09e0d64843")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "C2")
 					(unit 1)
@@ -5298,7 +5298,7 @@
 			(uuid "b8df7d52-6e56-4ff5-a99d-97582ff82ffa")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR4")
 					(unit 1)
@@ -5374,7 +5374,7 @@
 			(uuid "c9afe463-f7e7-4220-9904-892504c2de6e")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "U1")
 					(unit 1)
@@ -5439,7 +5439,7 @@
 			(uuid "dd31af5a-94e5-4e68-b8d0-22a12eea975b")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR5")
 					(unit 1)
@@ -5508,7 +5508,7 @@
 			(uuid "4cd0cf82-2ba6-43c3-b795-5de539616acb")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "C3")
 					(unit 1)
@@ -5573,7 +5573,7 @@
 			(uuid "4e84d2ef-b5d7-4129-a128-e5b60a0b3a16")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR6")
 					(unit 1)
@@ -5638,7 +5638,7 @@
 			(uuid "a655ff34-3b6a-4b5a-89c9-904fa3249b23")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR7")
 					(unit 1)
@@ -5782,7 +5782,7 @@
 			(uuid "664f9d68-42f9-4ad0-8906-77d8253687d3")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "Q2")
 					(unit 1)
@@ -5851,7 +5851,7 @@
 			(uuid "4fd361e6-893d-4093-aa96-e5ad04abc23c")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "R2")
 					(unit 1)
@@ -5926,7 +5926,7 @@
 			(uuid "87020206-a815-4cb5-8c2f-26bf69f295a2")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "Q3")
 					(unit 1)
@@ -5991,7 +5991,7 @@
 			(uuid "97d225fc-5b29-4254-b4c4-acd55077d3b2")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR8")
 					(unit 1)
@@ -6060,7 +6060,7 @@
 			(uuid "4a6028e8-e7cd-474a-8f7f-e8b3f709ff6a")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "R3")
 					(unit 1)
@@ -6125,7 +6125,7 @@
 			(uuid "83901615-86cf-4240-b072-f44f1464b581")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR9")
 					(unit 1)
@@ -6204,7 +6204,7 @@
 			(uuid "6d1b5dac-d7b5-485d-a77a-7b8abc9f1b1f")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "R4")
 					(unit 1)
@@ -6276,7 +6276,7 @@
 			(uuid "83aea75e-420e-40f1-9f5c-ecce52694a96")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "J1")
 					(unit 1)
@@ -6345,7 +6345,7 @@
 			(uuid "cb20de99-5e5c-4de8-98b0-d2ce29b65261")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "C4")
 					(unit 1)
@@ -6410,7 +6410,7 @@
 			(uuid "2c959099-3e2a-4207-9720-2d2e23a01fe1")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR10")
 					(unit 1)
@@ -6475,7 +6475,7 @@
 			(uuid "9d7f1621-42f9-48c1-9df0-83343a61a15c")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR11")
 					(unit 1)
@@ -6544,7 +6544,7 @@
 			(uuid "d9d83730-2ac9-4f8c-b030-f1fb8dea6a1a")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "R5")
 					(unit 1)
@@ -6783,7 +6783,7 @@
 			(uuid "f057d955-a4e3-468b-a76f-8ad63c887a54")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "U2")
 					(unit 1)
@@ -6848,7 +6848,7 @@
 			(uuid "a30a5a45-b5ac-4bb5-b913-4f0d33436eee")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR12")
 					(unit 1)
@@ -6917,7 +6917,7 @@
 			(uuid "1e9163ed-3449-47ae-a602-65ea1c7ecd4e")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "C5")
 					(unit 1)
@@ -6982,7 +6982,7 @@
 			(uuid "47e802a8-5b15-4543-9fd9-537d9262e498")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR13")
 					(unit 1)
@@ -7051,7 +7051,7 @@
 			(uuid "6d83191f-df07-4d71-9595-df314968d2de")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "C6")
 					(unit 1)
@@ -7116,7 +7116,7 @@
 			(uuid "19a6ac46-adf6-4a22-a166-938ff8c44cbc")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR14")
 					(unit 1)
@@ -7185,7 +7185,7 @@
 			(uuid "d0820d2e-4f6f-4426-942d-61a37a23975e")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "C7")
 					(unit 1)
@@ -7250,7 +7250,7 @@
 			(uuid "561a2615-4043-4085-b8c9-2c2a0c249c83")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR15")
 					(unit 1)
@@ -7319,7 +7319,7 @@
 			(uuid "409ba6ed-691f-4433-bde1-bb2a3091a9b4")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "C8")
 					(unit 1)
@@ -7384,7 +7384,7 @@
 			(uuid "1ed2a8ea-3c12-471d-9cd3-d5ad90f8a108")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR16")
 					(unit 1)
@@ -7453,7 +7453,7 @@
 			(uuid "0018e950-3e14-4d28-bcba-0d9388f7a624")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "C9")
 					(unit 1)
@@ -7518,7 +7518,7 @@
 			(uuid "d488edaf-1d0e-4316-9ec4-36b80b7c2453")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR17")
 					(unit 1)
@@ -7594,7 +7594,7 @@
 			(uuid "1f9c72df-f48c-4280-bf77-8dfa40f6e3bd")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR18")
 					(unit 1)
@@ -7673,7 +7673,7 @@
 			(uuid "28a500b5-1871-467c-b71e-2d97e04128dc")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "C10")
 					(unit 1)
@@ -7738,7 +7738,7 @@
 			(uuid "95eb6189-68ec-4bed-bc2e-1d7841da07ab")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR19")
 					(unit 1)
@@ -7807,7 +7807,7 @@
 			(uuid "57422a8e-f57c-4785-84a8-3ce7c638ebf1")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "SW1")
 					(unit 1)
@@ -7872,7 +7872,7 @@
 			(uuid "cf7373af-631c-44a0-a329-3f993bfdd036")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR20")
 					(unit 1)
@@ -7951,7 +7951,7 @@
 			(uuid "03e5afe1-d791-407d-b1e1-3261a9d272c4")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "R6")
 					(unit 1)
@@ -8016,7 +8016,7 @@
 			(uuid "8c3c8f47-bf36-4ccf-97e4-ecf0e6965758")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR21")
 					(unit 1)
@@ -8366,7 +8366,7 @@
 			(uuid "d1721d02-bccc-47f8-b59c-859d44b1e0d4")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "Y1")
 					(unit 1)
@@ -8435,7 +8435,7 @@
 			(uuid "3641a42f-23eb-4f5d-acf9-d172baf05c08")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "C11")
 					(unit 1)
@@ -8504,7 +8504,7 @@
 			(uuid "e0049202-8b38-47a9-97a9-e9a5607bf9ac")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "C12")
 					(unit 1)
@@ -8569,7 +8569,7 @@
 			(uuid "3075245b-8e49-49e2-bbfb-7a12206e6ffb")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR22")
 					(unit 1)
@@ -8634,7 +8634,7 @@
 			(uuid "ba412051-a014-45e1-8042-57fbcc4768fa")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR23")
 					(unit 1)
@@ -8830,7 +8830,7 @@
 			(uuid "dac8a380-2ba4-4719-806d-4bac2faf422b")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "U3")
 					(unit 1)
@@ -8989,7 +8989,7 @@
 			(uuid "abbc7124-308b-4121-a04f-c21e0b43ed92")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR24")
 					(unit 1)
@@ -9058,7 +9058,7 @@
 			(uuid "aa546b46-d84a-4ebb-80dd-a4994bd05468")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "C13")
 					(unit 1)
@@ -9123,7 +9123,7 @@
 			(uuid "5dc52726-b0a7-418d-b2de-91079f337733")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR25")
 					(unit 1)
@@ -9192,7 +9192,7 @@
 			(uuid "e83f0d2d-a41c-40cd-8e8a-42fda0a97620")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "C14")
 					(unit 1)
@@ -9257,7 +9257,7 @@
 			(uuid "30145ebe-84df-4842-9172-dd2f459ec4f4")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR26")
 					(unit 1)
@@ -9322,7 +9322,7 @@
 			(uuid "19aa30a0-3d55-4231-866c-e9ea66b6d8b3")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR27")
 					(unit 1)
@@ -9489,7 +9489,7 @@
 			(uuid "50ca5a3e-a60b-4f5e-9c7c-258dda7b2aac")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "U4")
 					(unit 1)
@@ -9558,7 +9558,7 @@
 			(uuid "9a398f4e-5368-496d-8771-fb0eb1e9b623")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "C15")
 					(unit 1)
@@ -9623,7 +9623,7 @@
 			(uuid "e4bbe387-197b-4ef6-8652-c1a5ffb0ec68")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR28")
 					(unit 1)
@@ -9692,7 +9692,7 @@
 			(uuid "e6db1666-8034-4d9e-82ce-e6d9f694f82f")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "R7")
 					(unit 1)
@@ -9767,7 +9767,7 @@
 			(uuid "14d180bf-2538-4fa5-94df-5dbdc0f882c6")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#FLG3")
 					(unit 1)
@@ -9832,7 +9832,7 @@
 			(uuid "a43193a3-9da2-4b6b-b506-035c882446c5")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR29")
 					(unit 1)
@@ -9911,7 +9911,7 @@
 			(uuid "f33165c6-3bdf-40b8-86f8-621a7ae5b318")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "Q4")
 					(unit 1)
@@ -9990,7 +9990,7 @@
 			(uuid "720e0d38-d8b0-4012-acc7-704ebab07eb0")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "R8")
 					(unit 1)
@@ -10055,7 +10055,7 @@
 			(uuid "036df2f8-ce05-4d87-ae66-8610c6b76878")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR30")
 					(unit 1)
@@ -10134,7 +10134,7 @@
 			(uuid "be5114a6-679c-41d1-aa72-b93f8fe9137c")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "R9")
 					(unit 1)
@@ -10222,7 +10222,7 @@
 			(uuid "52589ae4-732a-4e84-b051-cabeaba1f69a")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "D1")
 					(unit 1)
@@ -10287,7 +10287,7 @@
 			(uuid "8a3408d7-5df5-4f19-b1ae-fc1342a0fd62")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR31")
 					(unit 1)
@@ -10356,7 +10356,7 @@
 			(uuid "1e7ca4f8-595e-46f7-b703-0c368d394ddf")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "SW2")
 					(unit 1)
@@ -10431,7 +10431,7 @@
 			(uuid "f8e7baa5-c503-49b3-aba7-292c3b12fcbb")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR32")
 					(unit 1)
@@ -10500,7 +10500,7 @@
 			(uuid "97ad126e-6268-49bf-bfb2-8ab158cf8420")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "SW3")
 					(unit 1)
@@ -10575,7 +10575,7 @@
 			(uuid "79ef0120-0d96-4ef1-9446-810891e935c1")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR33")
 					(unit 1)
@@ -10722,7 +10722,7 @@
 			(uuid "b4d17761-a804-4e7b-b935-8613a8f71f94")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "J2")
 					(unit 1)
@@ -10787,7 +10787,7 @@
 			(uuid "29faf17a-942b-4b21-94cb-f53ecb88f6af")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR34")
 					(unit 1)
@@ -10882,7 +10882,7 @@
 			(uuid "f4ebba5e-7793-44a3-a13b-8f9aa2ac1fcd")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "#PWR35")
 					(unit 1)
@@ -10948,7 +10948,7 @@
 			(uuid "8ccee2d3-f701-4171-9bae-1eae4dbc639e")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "TP1")
 					(unit 1)
@@ -11024,7 +11024,7 @@
 			(uuid "c2a02214-cb2d-41db-867f-5ace8f196435")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "TP2")
 					(unit 1)
@@ -11100,7 +11100,7 @@
 			(uuid "acb270b5-af03-434a-9f93-3d3c8008d23c")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "TP3")
 					(unit 1)
@@ -11176,7 +11176,7 @@
 			(uuid "74a23150-198b-4571-96b9-fff6f24eb77e")
 		)
 		(instances
-			(project "motion-light-switch"
+			(project "motion-light-switch-slave"
 				(path "/ac64782b-5876-4044-8cdf-83ab957ec5be"
 					(reference "TP4")
 					(unit 1)
