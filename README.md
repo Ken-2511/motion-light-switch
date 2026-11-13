@@ -22,7 +22,7 @@ The two boards are ordered as separate designs (a combined panel would incur a d
 | --- | --- |
 | Light | Existing 220 V AC corridor lights |
 | Switch | Single-gang rocker; lower half = on, upper half = off |
-| Switch panel | Believed to be the Chinese 86-type; not yet measured |
+| Switch panel | Believed to be the Chinese 86-type (86×86 mm plate). The rocker covers most of the plate: about 76 mm wide and 72 mm tall, leaving ~5 mm at each side (author's estimate; not yet measured). |
 | Layout | Several switches along the corridor; each switch's lights cover a few meters |
 | Foot traffic | Heavy during class breaks, arrival and dismissal; sparse otherwise |
 
@@ -82,8 +82,9 @@ The SuperMini pin order and row spacing come from a published pinout image; chec
 | Battery holder | Generic 1-cell through-hole 18650 holder from Taobao, a clone of the MPD BH-18650-PC (77.7 mm long; solder pins 72.90 mm apart; two Ø3.2 mm mounting holes 55.61 mm apart). Soldered onto the slave PCB with KiCad footprint `Battery:BatteryHolder_MPD_BH-18650-PC`, whose pad 1 is +. The genuine MPD part (LCSC C5339083) was out of stock. |
 | Reverse-polarity protection | AO3401 P-MOSFET: drain to battery +, source to the circuit, gate to ground through a resistor. Chosen over a diode to avoid a ~0.3 V drop. |
 | 3.3 V regulator | TPS7A0233 (fixed 3.3 V, ~25 nA quiescent current, SOT-23-5). Powers the MCU, radio and sensors only (~30 mA peak). |
+| Servo | MG90S (metal gears, ~2.2 kg·cm, same size as the SG90). Stall current up to ~1 A, which the servo power switch and the 18650 handle. |
 | Servo power switch | High-side P-MOSFET from the battery, off whenever the servo is idle. A ~100 kΩ resistor pulls its gate up to the battery; a 2N7002 driven by the MCU pulls it low. |
-| Servo supply voltage | PCB has a footprint for a boost converter plus a 0 Ω bypass resistor, so a bench test can choose direct battery or 5 V |
+| Servo supply voltage | Directly from the battery (~3.0–4.2 V) through the servo power switch. The current PCB has no boost converter; if the bench test shows the servo needs 5 V, the board needs a revision. |
 | Motion sensor | Bare AM312 PIR (LCSC C114881, TO-5 can; pins 1 VDD, 2 OUT, 3 GND per LCSC) soldered on the PCB, behind a separate Fresnel lens in the enclosure. mmWave rejected for its current draw. Current: ~13–15 µA measured by others at 3.3 V; datasheet maximum 0.1 mA. |
 | PIR power switching | PIR powered from PA8 through a 100 Ω / 1 µF filter, so firmware can switch it off when lights are not needed (daytime, weekends, holidays). Firmware ignores PIR_OUT for ~30 s after power-up and keeps PA0's pull-up off while the PIR is off. |
 | Ambient light | Everlight ALS-PT19-315C/L177/TR8 visible-light phototransistor (LCSC C146233, 0603), read by the ADC with a 100 kΩ load and powered from a GPIO only while measuring. Chosen over the infrared PT15-21C, which barely sees LED lighting. |
@@ -133,28 +134,26 @@ Firmware must configure PB9, PB12–PB15, PH0, PH1 and PC13 as outputs driven lo
 | Tamper resistance | Hidden hex screw on the bottom, against children |
 | Maintenance | Remove the main body to swap the battery |
 | Fabrication | 3D printed (author has a printer) |
+| Press mechanism | A straight printed bar, ~66 mm long and ~6 mm wide, fixed at its middle to the servo shaft through a printed hub (~8 mm long). The shaft runs parallel to the wall at the rocker's pivot height, so the bar stands in front of the rocker like a second seesaw: tilting it ~10–15° one way presses one end of the rocker while the bar's other end backs away. The bar sits over the rocker's left edge, with its ends ~33 mm from the pivot; the servo body sits just outside the plate. At rest the bar is centered with a few millimeters of gap at both ends, so the rest of the rocker can still be pressed by hand. |
+| Extra force, if needed | A 10-tooth to 30-tooth spur gear pair between servo and bar (3× force, 1/3 speed), added only if the force test shows the servo alone is too weak |
 
 ## 2. Open Questions
 
-- [ ] Servo model
-- [ ] Servo supply: direct from battery or boosted to 5 V (bench test)
-- [ ] Force needed to flip the switch, and servo torque (bench test with a real switch and servo)
-- [ ] Mechanism that presses the rocker (after the bench tests)
-- [ ] Boost converter IC, if the bench test shows 5 V is needed
+- [ ] Whether the MG90S works reliably straight from the battery down to ~3.0 V (bench test)
+- [ ] Force needed to flip the switch, pressing one rocker end ~33 mm from the pivot (e.g. with a kitchen scale). The MG90S with the bar gives roughly 5 N at 3.7 V; above ~3 N needed, add the gear pair.
+- [ ] Whether pressing near one edge twists the wide rocker
+- [ ] Boost converter IC and a board revision, if the bench test shows 5 V is needed
 - [ ] Motion-to-light-on latency target
 - [ ] Light-off delay and report interval
 - [ ] Phone side: master-hosted web page, Mi Home, or another platform
-- [ ] Switch panel dimensions (measure)
+- [ ] Switch panel dimensions (measure): rocker size, plate thickness, and how far each rocker end sticks out
 - [ ] Number of slaves
 
 ## 3. Unconfirmed Suggestions
 
 | Area | Suggestion | Reason |
 | --- | --- | --- |
-| Parts | MG90S servo | Metal gears, durable |
 | Parts | Boost IC with an enable pin | Can be shut off between servo actions |
-| Mechanical | Servo arm rests at the middle of the rocker, swings one way for on and the other for off, then returns to the middle | The switch still works by hand |
-| Mechanical | Short servo arm pressing near the outer edge of the rocker; add a cam or lever if more force is needed | Less servo torque needed |
 | Mechanical | Servo pushes toward the wall, so the reaction force goes through the enclosure into the wall | The press cannot pry the unit off its adhesive |
 | Mechanical | Locating pins on the backplate | Servo returns to the same position after reassembly |
 | Firmware | Turn the light off locally if the master is unreachable for a long time | Lights do not stay on when the master fails |
